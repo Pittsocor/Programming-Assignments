@@ -1,0 +1,20 @@
+tri = input('Enter a triangle:\n').split()
+for i in range(len(tri)):	
+	tri[i] = int(tri[i])	# sets each value in tri as an integer for later use
+
+c = max(tri)	# sets c as maximum value of tri
+tri.remove(c)	# removes c from list
+
+a = tri[0]
+b = tri[1]
+
+def selection(a, b, c):			# gets answer
+	if c**2 < a**2 + b**2:		# Acute guidelines
+		return 'Acute'
+	elif c**2 == a**2 + b**2:	# Right guidelines
+		return 'Right'
+	elif c**2 > a**2 + b**2:	# Obtuse guideline
+		return 'Obtuse'
+
+print ()
+print ('Answer:\n' + selection(a, b, c))	# prints answer
