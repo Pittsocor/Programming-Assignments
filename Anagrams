@@ -1,0 +1,34 @@
+# variable for input	#
+# break up word			#
+# sort the word			#
+# create file			#
+# open file				#
+# read line by line		#
+# compare to our input	#
+# print matching words	#
+
+print('><><><><><><><><><><><><><')
+print('Welcome to Scrabble Hacker')
+print('><><><><><><><><><><><><><')
+print()
+
+anagram = input('Enter a word: ').upper()
+
+print()
+list_anagram = list(anagram)				# breaks up word into a list
+print (list_anagram)
+
+list_anagram.sort()							# sorts list alphabetically
+print (list_anagram)
+print()
+
+def checkWords():
+	with open('wordbank.txt', 'r') as f:	# opens file named f
+		for line in f:
+			word = line.strip()				# gets rid of spaces
+			list_word = list(word)			# breaks up word into a list
+			list_word.sort()				# sorts list alphabetically
+			if list_anagram == list_word:
+				print (word)
+
+checkWords()
