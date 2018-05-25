@@ -1,0 +1,33 @@
+import random
+
+print('Welcome to Hangman!')
+
+# Insert the code from last exercise here.
+
+with open('wordbank.txt', 'r') as f:
+	num = random.randint(0,267750)
+	i = 0
+	for line in f:
+		line = line.strip()
+		i += 1
+		if i == num:
+			line = line.strip()
+			break
+
+# Now ask the user to guess the word
+guess = list('_' * len(line))
+print (' '.join(guess))  # This joins the guess with the blank spaces.
+
+while list(line) != guess:
+	letter = input('\nGuess a letter: ').upper()
+	if letter in list(line):
+		i = 0
+		while i < len(line):
+			if list(line)[i] == letter:
+				guess[i] = letter
+				print (' '.join(guess))
+			i += 1
+	else:
+		print ('incorrect')
+
+print ('\n\nYou\'re right! It\'s ' + line + '.')
