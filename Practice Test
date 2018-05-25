@@ -1,0 +1,21 @@
+// 1st answer
+function getElementsAfter(arr, num) {
+	var new_arr = [];
+	for (var i = num + 1; i < arr.length; i++) {
+		new_arr.push(arr[i]);
+	}
+	return new_arr;
+}
+
+var output = getElementsAfter(['a', 'b', 'c', 'd', 'e'], 2); 
+console.log(output); // --> ['d', 'e']
+
+// 2nd answer
+function calculateInterest (principle, rate, time) {
+	// A = P(1 + rt)
+	return (principle * (1 + (rate/100) * time));
+}
+
+console.log(calculateInterest(1000, 3.5, 5)) // --> 1175.00
+
+console.log(calculateInterest(1200, 4.2, 4)) // --> 1401.60
