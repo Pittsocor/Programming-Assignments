@@ -1,0 +1,10 @@
+import random
+
+with open('wordbank.txt', 'r') as f:
+	num = random.randint(0,267750)
+	i = 0
+	for line in f:
+		line = line.strip()
+		i += 1
+		if i == num:
+			print (line)
