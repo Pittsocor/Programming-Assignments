@@ -1,0 +1,25 @@
+#create a function that returns the longest word from a list.
+def longest_word():
+	with open('alice.txt', 'r') as f:
+		lines = f.readlines()
+		z = 1
+		word1 = ''
+		word = ['_' * 200]
+		final_word = ''
+		for num in range(len(lines)):
+			line = lines[num].strip('\n')
+			words = list(line)
+			for x in range(len(words)):
+				word[z] = words[x]
+				z += 1
+				if words[x] == ' ':
+					word1 = ''.join(word).strip('')
+					z = 0
+					if len(word1) > len(final_word):
+						final_word = word1
+					else :
+						word1 = ''
+						word = ['_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_']
+		print (z)
+		print (final_word)
+longest_word()
