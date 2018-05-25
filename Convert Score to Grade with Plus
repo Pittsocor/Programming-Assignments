@@ -1,0 +1,41 @@
+function convertScoreToGradeWithPlusAndMinus(score) {
+  // your code here
+  var letter = "";
+  var sign = "";
+  var num = score - (score%10);
+  
+  if (score > 100 || score < 0){
+  	return "INVALID SCORE";
+  }
+  
+  if (num < 60){
+  	letter = "F";
+  }
+  if (num == 60){
+  	letter = "D";
+  }
+  if (num == 70){
+  	letter = "C";
+  }
+  if (num == 80){
+  	letter = "B";
+  }
+  if (num > 80){
+  	letter = "A";
+  }
+  
+  if (letter != "F"){
+	  if (score % 10 == 0 || score % 10 == 1 || score % 10 == 2){
+	  	sign = "-"
+	  }
+	  if (score % 10 == 8 || score % 10 == 9){
+	  	sign = "+";
+	  }
+  }
+  
+  grade = letter + sign;
+  
+  return grade;
+}
+var output = convertScoreToGradeWithPlusAndMinus(91);
+console.log(output); // --> 'A-'
