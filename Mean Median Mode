@@ -1,0 +1,41 @@
+import collections
+
+num = input('Input your list of numbers:\n').split()
+
+sorted_num = sorted(num)
+
+def mean():
+	a = 0
+	for i in range(len(sorted_num)):
+		a = int(sorted_num[i]) + a
+	average = a/len(sorted_num)
+	print('mean:', round(average,1))
+
+def median():
+	b = 0
+	c = 0
+	middle = ''
+	if len(sorted_num)%2 == 0:
+		b = int(sorted_num[int(len(sorted_num)/2) - 1])
+		c = int(sorted_num[int(len(sorted_num)/2)])
+		middle = str(b) + ' ' + str(c)
+	else:
+		middle = int(sorted_num[int((len(sorted_num)-1)/2)])
+	print('median:', str(middle))
+
+def mode():
+	z = 0
+	h = 0
+	for i in range(0, len(sorted_num)):
+		j = 0
+		for sorted_num[i] in sorted_num:
+			j += 1
+		if j > h:
+			z = int(sorted_num[i-1])
+			h = j
+		else: j = 0
+	print('mode:', z)
+
+mean()
+median()
+mode()
