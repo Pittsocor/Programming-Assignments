@@ -1,0 +1,13 @@
+s = float(input('How many seconds old are you?  '))
+
+age = (s / 60 / 60 / 24 / 365.25)
+
+print()
+print ('On Earth you are', round(age,2), 'years old.')
+print ('On Mercury you are', round((age / 0.2408467), 2),'years old.')
+print ('On Venus you are', round((age / 0.61519726), 2),'years old.')
+print ('On Mars you are', round((age / 1.8808158), 2),'years old.')
+print ('On Jupiter you are', round((age / 11.862615), 2),'years old.')
+print ('On Saturn you are', round((age / 29.447498), 2),'years old.')
+print ('On Uranus you are', round((age / 84.016846), 2),'years old.')
+print ('On Neptune you are', round((age / 164.79132), 2),'years old.')
