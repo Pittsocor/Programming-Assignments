@@ -1,0 +1,32 @@
+total = float(input('Total cost?  '))
+total = round(total, 2)
+print()
+given = float(input('Money given?  '))
+given = round(given, 2)
+change = given - total
+
+def Change(c):
+	c = c * 100
+	
+	dollars = int(c/100)
+	c1 = int(c%100)
+	quarters = int(c1/25)
+	c2 = int(c1%25)
+	dimes = int(c2/10)
+	c3 = int(c2%10)
+	nickels = int(c3/5)
+	c4 = int(c3%5)
+	pennies = c4
+	
+	c = round(c/100, 2)
+	
+	print()
+	
+	print ('Change:', str(c))
+	print (str(dollars), 'dollar(s)')
+	print (str(quarters), 'quarter(s)')
+	print (str(dimes), 'dime(s)')
+	print (str(nickels), 'nickel(s)')
+	print (str(pennies), 'pennie(s)')
+
+Change(change)
