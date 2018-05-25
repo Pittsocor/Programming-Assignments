@@ -1,0 +1,100 @@
+import random
+
+print('Welcome to Hangman!')
+
+# Insert the code from last exercise here.
+with open('wordbank.txt', 'r') as f:
+	num = random.randint(0,267750)
+	i = 0
+	for line in f:
+		line = line.strip()
+		i += 1
+		if i == num:
+			line = line.strip()
+			break
+
+inc = 0
+
+stand = ("  ____\n" +
+		" |    |\n" +
+		" |\n" +
+		" |\n" +
+		" |\n" +
+		" |\n" +
+		"=========")
+		
+# Now ask the user to guess the word
+guess = list('_' * len(line))
+print (stand)
+print (' '.join(guess))  # This joins the guess with the blank spaces.
+
+while list(line) != guess:
+	letter = input('\nGuess a letter: ').upper()
+	if letter in list(line):
+		i = 0
+		while i < len(line):
+			if list(line)[i] == letter:
+				guess[i] = letter
+				print (' '.join(guess))
+			i += 1
+	else:
+		inc += 1
+		print ('incorrect')
+		if inc == 1:
+			stand = ("  ____\n" +
+					" |    |\n" +
+					" |    O\n" +
+					" |\n" +
+					" |\n" +
+					" |\n" +
+					"=========")
+		elif inc == 2:
+			stand = ("  ____\n" +
+					" |    |\n" +
+					" |    O\n" +
+					" |    |\n" +
+					" |\n" +
+					" |\n" +
+					"=========")
+		elif inc == 3:
+			stand = ("  ____\n" +
+					" |    |\n" +
+					" |    O\n" +
+					" |   /|\n" +
+					" |\n" +
+					" |\n" +
+					"=========")
+		elif inc == 4:
+			stand = ("  ____\n" +
+					" |    |\n" +
+					" |    O\n" +
+					" |   /|\\\n" +
+					" |\n" +
+					" |\n" +
+					"=========")
+		elif inc == 5:
+			stand = ("  ____\n" +
+					" |    |\n" +
+					" |    O\n" +
+					" |   /|\\\n" +
+					" |   /\n" +
+					" |\n" +
+					"=========")
+		elif inc == 6:
+			stand = ("  ____\n" +
+					" |    |\n" +
+					" |    O\n" +
+					" |   /|\\\n" +
+					" |   / \\\n" +
+					" |\n" +
+					"========")
+		print (stand)
+		print (' '.join(guess))
+
+	if inc == 6:
+		print ("\nThe word was: " + str(line) +"\n")
+		print ("GAME OVER!")
+		break
+
+if list(line) == guess:
+	print ('\n\nYou\'re right! It\'s ' + line + '.')
