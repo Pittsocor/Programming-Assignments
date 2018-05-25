@@ -1,0 +1,8 @@
+a = int(input())
+b = int(input())
+
+def love8(a, b):
+	if a == 8 or b == 8 or abs(a - b) == 8 or abs(b - a) == 8 or abs(a + b) == 8:
+		print (True)
+	else : print (False)
+love8(a,b)
