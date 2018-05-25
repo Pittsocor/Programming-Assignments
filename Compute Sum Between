@@ -1,0 +1,11 @@
+function computeSumBetween(num1, num2) {
+  // your code here
+  var t = 0;
+  for (i=num1;i<num2;i++){
+  	t += i;
+  }
+  return t;
+}
+
+var output = computeSumBetween(2, 5);
+console.log(output); // --> 9
