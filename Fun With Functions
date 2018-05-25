@@ -1,0 +1,91 @@
+# import anything necessary here.
+
+# A1 - combining inputs
+# This program reads two numbers and prints their sum:
+
+
+def sum_three():
+  a = int(input())
+  b = int(input())
+  c = int(input())
+  return (a+b+c)
+  
+print(sum_three())
+
+
+#A2 - Area of a Triangle
+
+def tri_area():
+  b = int(input())
+  h = int(input())
+
+  area = float((b*h)*0.5)
+  print("\n",area)
+print(tri_area())
+
+#A3 - Combining Strings
+
+def combine_string():
+  name = input()
+  print ("Hello, %s!" % name)
+print(combine_string())
+
+#A4 - Find the larger of 2 numbers
+
+def find_larger():
+  # Read 2 integers:
+  numA = int(input())
+  numB = int(input())
+
+  if numA > numB:
+    print("The bigger number is %s." % numA)
+  elif numB > numA:
+    print("The bigger number is %s." %numB)
+  elif numA == numB:
+    print("The numbers are equal.")
+print(find_larger())
+
+#A5 - Printing Arrays
+
+def print_arrays():
+  # This is an array that contains different foods
+  food_items = ["turkey","ham", "spam","eggs","nuts"]
+
+  # print "eggs" from the loop USING an Array
+  print(food_items[3])
+
+  # Use a for loop to print all of the food items
+  print("This will print the array of food items")
+  for x in food_items:
+    print(x)
+print(print_arrays())
+
+#A6 - Else if statements
+
+def elif_example():
+  # This program will take a numerical grade and give a letter grade output
+  grade = int(input("Enter your grade: "))
+  
+  if grade >= 90:
+    print("A")
+  elif 90 > grade >=80:
+    print("B")
+  elif 80 > grade >=70:
+    print("C")
+  elif 70 > grade >=60:
+    print("D")
+  elif grade < 60:
+    print("F")
+print(elif_example())
+
+#A7 - Partial Arrays
+
+def partial_arrays():
+  # Given is the array below.
+  a1 = [1, 1, 2, 3, 4, 5, 8, 11, 13, 17, 19, 20, 21, 34, 43, 55, 89]
+  x = 0
+  print(1)
+  while a1[x] in range (1, 21):
+    x += 1
+    print(a1[x])
+print(partial_arrays())
