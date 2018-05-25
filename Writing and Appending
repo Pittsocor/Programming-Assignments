@@ -1,0 +1,37 @@
+file = open('timestable.txt', 'w')
+x = 1
+
+def times_table(i):
+  file.write(str(i) + " TIMES TABLE\n")
+  i1 = i * 1
+  file.write("1 x "+ str(i)+ " = "+ str(i1))
+  i2 = i * 2
+  file.write("\n2 x "+ str(i)+ " = "+ str(i2))
+  i3 = i * 3
+  file.write("\n3 x "+ str(i)+ " = "+ str(i3))
+  i4 = i * 4
+  file.write("\n4 x "+ str(i)+ " = "+ str(i4))
+  i5 = i * 5
+  file.write("\n5 x "+ str(i)+ " = "+ str(i5))
+  i6 = i * 6
+  file.write("\n6 x "+ str(i)+ " = "+ str(i6))
+  i7 = i * 7
+  file.write("\n7 x "+ str(i)+ " = "+ str(i7))
+  i8 = i * 8
+  file.write("\n8 x "+ str(i)+ " = "+ str(i8))
+  i9 = i * 9
+  file.write("\n9 x "+ str(i)+ " = "+ str(i9))
+  i10 = i * 10
+  file.write("\n10 x "+ str(i)+ " = "+ str(i10))
+  i11 = i * 11
+  file.write("\n11 x "+ str(i)+ " = "+ str(i11))
+  i12 = i * 12
+  file.write("\n12 x "+ str(i)+ " = "+ str(i12))
+  file.write("\n\n")
+
+while x <= 12:
+  times_table(x)
+  x += 1
+
+if x > 12:
+  file.close()
