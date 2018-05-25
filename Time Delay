@@ -1,0 +1,6 @@
+# This program will count to 10 with a second pause in between.
+import time
+
+for i in range(1,11):
+  time.sleep(1)
+  print(i)
