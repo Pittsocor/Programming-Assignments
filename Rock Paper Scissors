@@ -1,0 +1,68 @@
+'''	create variable for choices
+	ask player to choose one		
+	create computer variable		
+	comuter random choice			
+	compare choices				
+	print outcome					
+	repeat						'''
+
+import random
+
+print ('='*31)
+print ('Let\'s play Rock Paper Scissors!')
+print ('='*31)
+print ()
+choices = ['rock', 'paper', 'scissors']
+
+go = True
+p_score = 0
+c_score = 0
+
+def playGame():
+	global go, p_score, c_score
+	print()
+	print()
+	player = input('Choose ROCK, PAPER, or SCISSORS ----->').lower()
+	'''if player.upper() != choices[0] or player.upper() != choices[1] or player.upper() != choices[2]:
+		player = input('Invalid input. Choose again --------->')'''
+	
+	computer = random.choice(choices)
+	print ('The computer chose: ----------------->', computer)
+	
+	print()
+	
+
+	if player == computer:
+		print ('\nIT\'S A TIE!')
+	elif player == 'rock':
+		if computer == 'scissors':
+			print ('YOU WIN! Rock smashes scissors!')
+			p_score += 1
+		elif computer == 'paper':
+			print ('YOU LOSE! Paper covers rock!')
+			c_score += 1
+	elif player == 'paper':
+		if computer == 'rock':
+			print ('YOU WIN! Paper covers rock!')
+			p_score += 1
+		elif computer == 'scissors':
+			print ('YOU LOSE! Scissors cuts paper!')
+			c_score += 1
+	elif player == 'scissors':
+		if computer == 'paper':
+			print ('YOU WIN! Scissors cuts paper!')
+			p_score += 1
+		elif computer == 'rock':
+			print ('YOU LOSE! Rock smashes scissors!')
+			c_score += 1
+	print ()
+	print('					You --------> ' + str(p_score) + "\n					Computer ---> " + str(c_score))
+	repeat = input('\nWould you like to play again?\n			YES or NO --->').upper()
+	if repeat == 'YES': go = True
+	else: go = False
+
+while go == True:
+	playGame()
+if go == False:
+	print()
+	print('-------------------- GAME OVER --------------------')
