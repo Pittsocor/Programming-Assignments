@@ -1,0 +1,13 @@
+def fib(n):
+	result = []
+	array = [0 for x in range(100000)]
+	a, b = 0, 1
+	while b < n:
+		result.append(b)    # see below
+		a, b = b, a+b
+		for x in range(len(result)):
+			if result[x] % 2 == 0:
+				array[x] = result[x]
+	print (sum(array))
+
+fib(100000)
