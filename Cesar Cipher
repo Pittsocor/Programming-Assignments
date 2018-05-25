@@ -1,0 +1,16 @@
+#This program will take an input and give you the coded version.
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+key = int(input('Enter the key shift: '))
+message = input('Please enter a message: ')
+newMessage = ''
+
+for char in message:
+    if char in alphabet:
+        pos = alphabet.find(char)
+        newPos = (pos + key) % 26
+        newChar = alphabet[newPos]
+        newMessage += newChar
+    else: newMessage += char
+
+print ('Your new message is:', newMessage)
