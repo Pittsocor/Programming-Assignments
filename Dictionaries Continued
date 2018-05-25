@@ -1,0 +1,35 @@
+# Example code showing how to define a dictionary and add a new key/value pair to it
+person = {'name': 'Bob', 'dob': '12/03/1975', 'gender':'male'}
+person['height'] = 74
+print(person)
+
+# Example code showing how to iterate over the keys and values in a dictionary
+for key in person:
+    print(key, ":", person[key])
+
+# >>>>>>>>>>  END OF EXAMPLES <<<<<<<<<<<<
+
+# Write your solution for Exercises 1 and 2 below here:
+me = {'name': 'Aaron',
+  'DOB': '3/3/00',
+  'height': str(5*12+6),
+  'eye color': 'blue-gray'}
+
+print()
+print("My details\n" + '='*10)
+for key in me:
+    print(key, ":", me[key])
+print()
+
+# Write your solution for Exercise 3 below here:
+me ['name'] = "Aaron Michael Pittser"
+
+# Write your solution for Exercise 4 below here:
+me ['shoe size'] = '7.5'
+
+# Write your solution for Exercise 5 below here:
+del me ['eye color']
+
+print("My details\n" + '='*10)
+for key in me:
+    print(key, ":", me[key])
