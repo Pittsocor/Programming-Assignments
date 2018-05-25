@@ -1,0 +1,16 @@
+function flipPairs(input){
+	var final = input.split("");
+	var arr = [];
+	
+	for (var i = 0; i < final.length; i = i + 2) {
+		var slice = final.slice(i, i + 2);
+		var flip_slice = slice.reverse();
+		arr.push(flip_slice.join(""));
+	}
+	
+	return arr.join("");
+}
+
+var input = 'check out how interesting this problem is, it\'s insanely interesting!';
+var output = flipPairs(input);
+console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei ,si 't sniasenyli tnreseitgn!
