@@ -1,0 +1,8 @@
+#Ask the user what size of game board do they want to print?
+def print_board():
+    board_size = int(input("What size of game board? "))
+    for i in range(board_size):
+        print(" ---" * board_size)
+        print("|   " * (board_size + 1))
+    print (" ---" * board_size)
+print_board()
