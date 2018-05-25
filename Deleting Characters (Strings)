@@ -1,0 +1,7 @@
+# Read a string:
+word = input()
+# s = input()
+# Print a string:
+# print(s)
+word = word.translate({ord(c): None for c in '!@#$'})
+print (word)
