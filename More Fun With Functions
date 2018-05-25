@@ -1,0 +1,51 @@
+# imports. If you need to import anything, please place here.
+import time
+from collections import OrderedDict as od
+
+# inputs
+name = input('Enter your name: ')
+num_of_stars = int(input('Please Enter the rows of stars you would like to print: '))
+count = int(input('What number do you want to count to? '))
+
+array = input('Please enter an array separated by spaces to check for duplicates.\n').split()
+array = [int(x) for x in array]
+    
+
+# Exercise 1 function
+
+def reverse_name():
+    new_name = name[::-1]
+    return new_name
+
+
+# Exercise 2 function
+
+def print_stars():
+    for i in range(num_of_stars):
+        print('*'*i)
+
+
+# Exercise 3 function
+
+def count_num():
+    for i in range(1, count+1):
+        time.sleep(1)
+        print(i)
+
+# Exercise 4 function
+
+def arr_duplicate():
+    new_array = list(od.fromkeys(array))
+    print(new_array)
+
+# call your functions here
+print()
+print("-"*30) # separates input and output
+print()
+print(reverse_name()) # reverses name
+print()
+print_stars() # prints rows of stars
+print()
+count_num() # counts to input number with a second's delay in between
+print()
+arr_duplicate() # removes duplicates from the input array
