@@ -1,0 +1,21 @@
+function noDuplicates(phrase){
+  var list = phrase.split(" ");
+  var repeat = "";
+  for (i=0;i<list.length;i++) {
+  	for (x=i+1;x<list.length;x++) {
+  		if (list[i] == list[x]) {
+  			repeat = list[i];
+  		}
+  	}
+  }
+  
+  if (repeat != "") {
+  	repeat = "no";
+  } else {
+  	repeat = "yes";
+  }
+  return repeat;
+}
+
+var output = noDuplicates("IN THE RAIN AND SNOW");
+console.log(output);
