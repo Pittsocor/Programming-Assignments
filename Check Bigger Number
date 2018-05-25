@@ -1,0 +1,15 @@
+# Read 2 integers:
+numA = int(input())
+numB = int(input())
+
+if numA > numB:
+  print("The bigger number is %s." % numA)
+elif numB > numA:
+  print("The bigger number is %s." %numB)
+elif numA == numB:
+  print("The numbers are equal.")
+
+# Check to see which one is bigger
+
+
+# print the bigger integer
