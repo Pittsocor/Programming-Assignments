@@ -1,0 +1,30 @@
+game =  [[1, 2, 0],
+	[2, 1, 0],
+	[2, 1, 2]]
+	
+win = False
+
+def isWinner(bo, le):
+    global win
+    if (bo[0][0] == le) and (bo[1][1] == le) and (bo[2][2] == le):
+        print ("Player", str(le), "wins!")  # diagonal
+        win = True
+    if (bo[0][2] == le) and (bo[1][1] == le) and (bo[2][0] == le):
+        print ("Player", str(le), "wins!")  # diagonal
+        win = True
+    for i in range (0,2):
+        if (bo[i][0] == le) and (bo[i][1] == le) and (bo[i][2] == le):
+            print ("Player", str(le), "wins!")
+            win = True
+    for i in range (0, 2):
+        if (bo[0][i] == le) and (bo[1][i] == le) and (bo[2][i] == le):
+            print ("Player", str(le), "wins!")
+            win = True
+    
+def check_tie():
+    if win != True:
+        print ("It's a tie!")
+
+isWinner(game, 1)
+isWinner(game, 2)
+check_tie()
