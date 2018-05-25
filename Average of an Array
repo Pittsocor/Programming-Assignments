@@ -1,0 +1,17 @@
+# input how many arrays
+num_arrays = int(input("How many arrays do you want to find the average of?"))
+sum_array = [0 for num in range(num_arrays)]
+x = 0
+print("\nEnter your array ")
+#Hint:
+for i in range (0, num_arrays):
+  a = input().split()
+  a = [int(n) for n in a]
+  average = sum(a)/int(len(a))
+  sum_array[x] = int(average)
+  x += 1
+print("The average is ", sum_array)
+  
+#Now use the code to see how many arrays?
+
+#use a loop to now find the average and print the average.
