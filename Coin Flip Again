@@ -1,0 +1,19 @@
+import random	# import random t generate random numbers
+
+flips = input('How many times do you want to flip a coin?\n')	# get number 
+																# of flips
+heads_count = 0	# create variables for the heads count and tails count
+tails_count = 0
+
+for i in range(int(flips)):		# use a for loop to flip the coin for as
+	x = random.randint(0,1)		# many times as the user has requested
+	if x == 0:
+		heads_count += 1		# increase total number of heads flips
+	elif x == 1:
+		tails_count += 1		# increase total number of tails flips
+
+print()							# print the final results
+print ("Total coin flips")
+print ("================")
+print ("Heads : " + str(heads_count))
+print ("Tails : " + str(tails_count))
