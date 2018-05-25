@@ -1,0 +1,10 @@
+word = input("In: ")
+
+consonants = 'bcdfghjklmnpqrstvwxyz'
+counter = 0
+
+for i in range(len(word)):
+	if list(word)[i] in consonants:
+		counter += 1
+
+print (counter)
