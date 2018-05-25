@@ -1,0 +1,35 @@
+var library = [ 
+   { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+   { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+   { author: 'Aldous Huxley', title: 'Brave New World', libraryID: 3245},
+   { author: 'Stephen Hawking', title: 'A Brief History of Time', libraryID: 8237},
+   { author: 'Frank Herbert', title: 'Dune', libraryID: 390},
+   { author: 'Herman Hesse', title: 'Siddhartha', libraryID: 2112}
+   ];
+
+function sortNumber(a,b) {
+    return a - b;
+}
+
+function sortTheBooks(arr) {
+	var IDlist = [];
+	for (i=0;i<arr.length;i++) {
+		IDlist.push(arr[i].libraryID);
+	}
+	
+	IDlist.sort(sortNumber);
+	
+	for (i=0;i<IDlist.length;i++) {
+		num = IDlist[i];
+		for (x=0;x<arr.length;x++) {
+			num2 = arr[x].libraryID;
+			if (num == num2) {
+				IDlist[i] = arr[x];
+			}
+		}
+	}
+	
+	return IDlist;
+}
+var output = sortTheBooks(library);
+console.log(output);
