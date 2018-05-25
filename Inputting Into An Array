@@ -1,0 +1,9 @@
+# Create a blank array
+array = []
+elementNum = int(input("How many elements do you want?: "))
+
+# Now use a for loop to add to the array.
+for x in range (0, elementNum):
+  array.append(int(input("Enter next number: ")))
+
+print(array)
