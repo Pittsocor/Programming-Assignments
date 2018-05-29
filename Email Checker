@@ -1,0 +1,30 @@
+e = input('Enter your electronic mailing address:\n')
+
+print ()
+
+def hasAt(stringInput):
+	return any(char == '@' for char in stringInput)
+
+def hasSpaces(stringInput):
+	return any(char == ' ' for char in stringInput)
+
+def hasPeriod(e):
+	dot, at = 0, 0
+	em = list(e)
+	for i in range(len(em)):
+		if em[i] == '@':
+			at = i
+		elif em[i] == '.':
+			dot = i
+	return (dot > at)
+
+if hasAt(e) == True and hasSpaces(e) == False and hasPeriod(e) == True:
+	print ('Cool email, my guy')
+else:
+	print ('Error:')
+	if hasAt(e) == False:
+		print ('no @ symbol')
+	if hasSpaces(e) == True:
+		print ('email has spaces')
+	if hasPeriod(e) == False:
+		print ('no period after @ symbol')
