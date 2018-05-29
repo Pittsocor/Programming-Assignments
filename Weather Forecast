@@ -1,0 +1,13 @@
+import requests
+from bs4 import BeautifulSoup as bs
+
+url = 'http://forecast.weather.gov/MapClick.php?lon=-84.0041839355469&lat=36.277407228260785#.WnyKz-jwZPY'
+r = requests.get(url)
+r_html = r.text
+
+soup = bs(r_html,"lxml")
+
+# this will fetch all of the links on a webpage
+for stories in soup.find_all('div', class_= 'tombstone-container'):
+    print(stories.text)#.replace('\n', " ").strip())
+
