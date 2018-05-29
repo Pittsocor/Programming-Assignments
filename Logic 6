@@ -1,0 +1,21 @@
+T = int(input())
+
+print ()
+
+cases = []
+scenario = ""
+
+for i in range(T):
+	scenario = input()
+	
+	cases.append(scenario)
+
+print ()
+
+for x in range(T):
+	c = cases[x]
+	
+	if "simon says " in c:
+		c = c.replace("simon says ", "")
+		print (c)
+	else: print()
